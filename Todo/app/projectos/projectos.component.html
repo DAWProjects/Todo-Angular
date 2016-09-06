@@ -1,0 +1,21 @@
+<h3>Todos os Projectos</h3>
+<a class="btn btn-primary glyphicon glyphicon-plus" (click)="create()"></a>
+<div class="grid grid-pad">
+    <div *ngFor="let projecto of projectos" class="col-md-4">
+        <div class="module hero" (click)="onSelect(projecto)">
+            <h4>{{projecto.nome}}</h4>
+            <p>{{projecto.estado}}</p>
+        </div>
+
+        <h5 *ngIf="projecto.membros.length > 0">Membros</h5>
+        <ul class="heroes">
+            <li
+                    *ngFor="let membro of projecto.membros"
+                    [class.selected]="membro === selectedMembro"
+                    (click)="onSelectMembro(membro)">
+                <span class="badge">{{membro.id}}</span> {{membro.nome}}
+
+            </li>
+        </ul>
+    </div>
+</div>

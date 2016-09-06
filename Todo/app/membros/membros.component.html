@@ -1,0 +1,20 @@
+<h3>Todos os Membros</h3>
+<a class="btn btn-primary glyphicon glyphicon-plus" (click)="create()"></a>
+<div class="grid grid-pad">
+    <div *ngFor="let membro of membros" (click)="gotoDetail(membro)" class="col-md-4">
+        <div class="module hero">
+            <h4>{{membro.nome}}</h4>
+            <p>{{membro.cargo}}</p>
+        </div>
+        <h5 *ngIf="membro.tarefas.length > 0">Tarefas</h5>
+        <ul class="heroes">
+            <li
+                    *ngFor="let tarefa of membro.tarefas"
+                    [class.selected]="tarefa === selectedTarefa"
+                    (click)="onSelect(tarefa)">
+                <span class="badge">{{tarefa.id}}</span> {{tarefa.titulo}}
+
+            </li>
+        </ul>
+    </div>
+</div>

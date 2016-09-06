@@ -1,0 +1,52 @@
+<div *ngIf="!membro" class="container">
+    <div class="col-md-6 form-group">
+        <div>
+            <label>Nome: </label>
+            <input #nome class="form-control" placeholder="nome"/>
+        </div>
+
+        <div>
+            <label>Sexo: </label>
+            <select class="form-control" #sexo>
+                <option disabled>Selecione o seu sexo</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select>
+
+        </div>
+
+        <div>
+            <label>Idade:</label>
+            <input #idade type="number" class="form-control"/>
+        </div>
+
+
+        <div>
+            <label>Cargo: </label>
+            <input #cargo type="text" class="form-control" placeholder="cargo"/>
+        </div>
+
+        <div>
+            <label>Estado: </label>
+            <input #estado class="form-control" placeholder="estado"/>
+        </div>
+
+
+        <div>
+            <label>Telefone: </label>
+            <input #telefone type="number" class="form-control" placeholder="telefone"/>
+        </div>
+
+
+        <div>
+            <label>Email: </label>
+            <input #email type="email" class="form-control" placeholder="Email"/>
+        </div>
+
+        <button (click)="voltar()" class="btn btn-default">Voltar</button>
+        <button (click)="add(titulo.value,data_criacao.value,data_entrega_desejada.value,estado.value, membro.value)"
+                class="btn btn-primary">Guardar
+        </button>
+    </div>
+</div>

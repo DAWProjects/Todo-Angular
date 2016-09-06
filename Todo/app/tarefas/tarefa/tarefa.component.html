@@ -1,0 +1,72 @@
+<div *ngIf="tarefa && !creating" class="container">
+    <h2>{{tarefa.titulo}}</h2>
+    <div class="col-md-4 form-group">
+        <div>
+            <label>Titulo: </label>
+            <input class="form-control" [(ngModel)]="tarefa.titulo" placeholder="titulo"/>
+        </div>
+
+        <div>
+            <label>Dt. Criação:</label>
+            <input type="date" class="form-control" [(ngModel)]="tarefa.data_criacao"/>
+        </div>
+
+        <div>
+            <label>Dt. Desejavel: </label>
+            <input type="date" class="form-control" [(ngModel)]="tarefa.data_entrega_desejada"/>
+        </div>
+
+        <div>
+            <label>Dt. Entregue: </label>
+            <input type="date" class="form-control" [(ngModel)]="tarefa.data_entrega_real"/>
+        </div>
+
+        <div>
+            <label>Estado: </label>
+            <input class="form-control" [(ngModel)]="tarefa.estado" placeholder="estado"/>
+        </div>
+
+        <button (click)="voltar()" class="btn btn-default">Voltar</button>
+        <button (click)="save()" class="btn btn-primary">Actualizar</button>
+    </div>
+</div>
+
+
+<div *ngIf="!tarefa" class="container">
+    <div class="col-md-4 form-group">
+        <div>
+            <label>Titulo: </label>
+            <input #titulo class="form-control" placeholder="titulo"/>
+        </div>
+
+        <div>
+            <label>Responsavel: </label>
+            <select class="form-control" #membro>
+                <option disabled>Selecione o responsavel</option>
+                <option *ngFor="let membro of membros" [value]="membro.id">{{membro.nome}}</option>
+            </select>
+
+        </div>
+
+        <div>
+            <label>Dt. Criação:</label>
+            <input #data_criacao type="date" class="form-control"/>
+        </div>
+
+
+        <div>
+            <label>Dt. Desejavel: </label>
+            <input #data_entrega_desejada type="date" class="form-control"/>
+        </div>
+
+        <div>
+            <label>Estado: </label>
+            <input #estado class="form-control" placeholder="estado"/>
+        </div>
+
+        <button (click)="voltar()" class="btn btn-default">Voltar</button>
+        <button (click)="add(titulo.value,data_criacao.value,data_entrega_desejada.value,estado.value, membro.value)"
+                class="btn btn-primary">Guardar
+        </button>
+    </div>
+</div>
