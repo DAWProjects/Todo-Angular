@@ -6,7 +6,7 @@ export class ConfigService {
     _apiURI : string;
 
     constructor() {
-        this._apiURI = 'http://localhost/Todo-angular/API/public/';
+        this._apiURI = 'http://localhost/Todo-Angular/API/public/';
      }
 
      getApiURI() {

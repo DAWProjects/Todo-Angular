@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var ConfigService = (function () {
     function ConfigService() {
-        this._apiURI = 'http://localhost/Todo-angular/API/public/';
+        this._apiURI = 'http://localhost/Todo-Angular/API/public/';
     }
     ConfigService.prototype.getApiURI = function () {
         return this._apiURI;

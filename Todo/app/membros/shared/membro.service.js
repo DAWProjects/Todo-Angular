@@ -15,7 +15,7 @@ var MembroService = (function () {
     function MembroService(http) {
         this.http = http;
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-        this.membrosUrl = 'http://localhost/Todo-angular/API/public/membros';
+        this.membrosUrl = 'http://localhost/Todo-Angular/API/public/membros';
     }
     MembroService.prototype.getMembros = function () {
         return this.http.get(this.membrosUrl)

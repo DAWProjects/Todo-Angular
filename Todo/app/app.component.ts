@@ -1,4 +1,4 @@
-import { Component, OnInit, trigger, state, style, animate, transition } from '@angular/core';
+import { Component, OnInit, trigger, state, style, animate, transition,Pipe } from '@angular/core';
 import { MobileHideDirective } from './shared/directives/mobile-hide.directive';
 import './rxjs-operators';
 

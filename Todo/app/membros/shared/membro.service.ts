@@ -9,7 +9,7 @@ import { Membro } from './membro.model';
 export class MembroService {
 
     private headers = new Headers({'Content-Type': 'application/json'});
-    private membrosUrl = 'http://localhost/Todo-angular/API/public/membros';
+    private membrosUrl = 'http://localhost/Todo-Angular/API/public/membros';
 
     getMembros(): Promise<Membro[]> {
         return this.http.get(this.membrosUrl)
