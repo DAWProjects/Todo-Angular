@@ -39,10 +39,9 @@ var TarefasComponent = (function () {
             selector: 'todas-tarefas',
             templateUrl: 'app/tarefas/tarefas.component.html',
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, index_1.TarefaService])
+        __metadata('design:paramtypes', [router_1.Router, index_1.TarefaService])
     ], TarefasComponent);
     return TarefasComponent;
-    var _a;
 }());
 exports.TarefasComponent = TarefasComponent;
 //# sourceMappingURL=tarefas.component.js.map

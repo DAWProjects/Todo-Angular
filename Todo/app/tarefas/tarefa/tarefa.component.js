@@ -60,10 +60,9 @@ var TarefaComponent = (function () {
             templateUrl: 'tarefa.component.html',
             styleUrls: ['tarefa.component.css']
         }), 
-        __metadata('design:paramtypes', [index_1.TarefaService, (typeof (_a = typeof router_1.ActivatedRoute !== 'undefined' && router_1.ActivatedRoute) === 'function' && _a) || Object, membro_service_1.MembroService])
+        __metadata('design:paramtypes', [index_1.TarefaService, router_1.ActivatedRoute, membro_service_1.MembroService])
     ], TarefaComponent);
     return TarefaComponent;
-    var _a;
 }());
 exports.TarefaComponent = TarefaComponent;
 //# sourceMappingURL=tarefa.component.js.map

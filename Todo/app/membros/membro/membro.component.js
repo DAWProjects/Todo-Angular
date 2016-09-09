@@ -57,10 +57,9 @@ var MembroComponent = (function () {
             templateUrl: 'app/membros/membro/membro.component.html',
             styleUrls: ['app/membros/membro/membro.component.css']
         }), 
-        __metadata('design:paramtypes', [index_1.MembroService, (typeof (_a = typeof router_1.ActivatedRoute !== 'undefined' && router_1.ActivatedRoute) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [index_1.MembroService, router_1.ActivatedRoute])
     ], MembroComponent);
     return MembroComponent;
-    var _a;
 }());
 exports.MembroComponent = MembroComponent;
 //# sourceMappingURL=membro.component.js.map

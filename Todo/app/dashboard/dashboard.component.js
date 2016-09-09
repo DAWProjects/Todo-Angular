@@ -13,7 +13,7 @@ var tarefa_service_1 = require('../tarefas/shared/tarefa.service');
 var membro_service_1 = require('../membros/shared/membro.service');
 var router_1 = require('@angular/router');
 var projecto_service_1 = require("../projectos/shared/projecto.service");
-var search_pipe_component_1 = require('../shared/utils/search-pipe.component');
+//import {FilterArrayPipe} from '../shared/utils/search-pipe.component';
 var DashboardComponent = (function () {
     function DashboardComponent(router, tarefaService, membroService, projectoService) {
         this.router = router;
@@ -39,12 +39,10 @@ var DashboardComponent = (function () {
             selector: 'my-dashboard',
             templateUrl: 'app/dashboard/dashboard.component.html',
             styleUrls: ['app/dashboard/dashboard.component.css'],
-            pipes: [search_pipe_component_1.FilterArrayPipe]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, tarefa_service_1.TarefaService, membro_service_1.MembroService, projecto_service_1.ProjectoService])
+        __metadata('design:paramtypes', [router_1.Router, tarefa_service_1.TarefaService, membro_service_1.MembroService, projecto_service_1.ProjectoService])
     ], DashboardComponent);
     return DashboardComponent;
-    var _a;
 }());
 exports.DashboardComponent = DashboardComponent;
 //# sourceMappingURL=dashboard.component.js.map

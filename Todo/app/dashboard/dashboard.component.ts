@@ -8,13 +8,13 @@ import {MembroService} from '../membros/shared/membro.service';
 import {Router} from '@angular/router';
 import {Projecto} from "../projectos/shared/projecto.model";
 import {ProjectoService} from "../projectos/shared/projecto.service";
-import {FilterArrayPipe} from '../shared/utils/search-pipe.component';
+//import {FilterArrayPipe} from '../shared/utils/search-pipe.component';
 
 @Component({
     selector: 'my-dashboard',
     templateUrl: 'app/dashboard/dashboard.component.html',
     styleUrls: ['app/dashboard/dashboard.component.css'],
-    pipes:[FilterArrayPipe]
+    //pipes:[FilterArrayPipe]
 })
 export class DashboardComponent implements OnInit {
 

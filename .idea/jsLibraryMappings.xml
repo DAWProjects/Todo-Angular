@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file:///Applications/XAMPP/xamppfiles/htdocs/Todo-Angular/Todo" libraries="{Teste-Angular/Todo/node_modules}" />
+    <file url="file://$PROJECT_DIR$/Todo" libraries="{Todo-Angular/Todo/node_modules}" />
   </component>
 </project>

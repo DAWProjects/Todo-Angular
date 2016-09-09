@@ -58,10 +58,9 @@ var ProjectoComponent = (function () {
             templateUrl: 'projecto.component.html',
             styleUrls: ['projecto.component.css']
         }), 
-        __metadata('design:paramtypes', [index_1.ProjectoService, (typeof (_a = typeof router_1.ActivatedRoute !== 'undefined' && router_1.ActivatedRoute) === 'function' && _a) || Object, membro_service_1.MembroService])
+        __metadata('design:paramtypes', [index_1.ProjectoService, router_1.ActivatedRoute, membro_service_1.MembroService])
     ], ProjectoComponent);
     return ProjectoComponent;
-    var _a;
 }());
 exports.ProjectoComponent = ProjectoComponent;
 //# sourceMappingURL=projecto.component.js.map
