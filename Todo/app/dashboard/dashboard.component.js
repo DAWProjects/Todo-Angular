@@ -41,9 +41,10 @@ var DashboardComponent = (function () {
             styleUrls: ['app/dashboard/dashboard.component.css'],
             pipes: [search_pipe_component_1.FilterArrayPipe]
         }), 
-        __metadata('design:paramtypes', [router_1.Router, tarefa_service_1.TarefaService, membro_service_1.MembroService, projecto_service_1.ProjectoService])
+        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, tarefa_service_1.TarefaService, membro_service_1.MembroService, projecto_service_1.ProjectoService])
     ], DashboardComponent);
     return DashboardComponent;
+    var _a;
 }());
 exports.DashboardComponent = DashboardComponent;
 //# sourceMappingURL=dashboard.component.js.map

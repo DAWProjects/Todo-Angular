@@ -44,9 +44,10 @@ var ProjectosComponent = (function () {
             selector: 'todos-projectos',
             templateUrl: 'projectos.component.html',
         }), 
-        __metadata('design:paramtypes', [router_1.Router, index_1.ProjectoService])
+        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, index_1.ProjectoService])
     ], ProjectosComponent);
     return ProjectosComponent;
+    var _a;
 }());
 exports.ProjectosComponent = ProjectosComponent;
 //# sourceMappingURL=projectos.component.js.map

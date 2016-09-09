@@ -43,9 +43,10 @@ var HighlightDirective = (function () {
         core_1.Directive({
             selector: '[highlight]'
         }), 
-        __metadata('design:paramtypes', [core_1.ElementRef])
+        __metadata('design:paramtypes', [(typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object])
     ], HighlightDirective);
     return HighlightDirective;
+    var _a;
 }());
 exports.HighlightDirective = HighlightDirective;
 //# sourceMappingURL=highlight.directive.js.map
