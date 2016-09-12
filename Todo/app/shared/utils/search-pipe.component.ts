@@ -1,5 +1,4 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {Projecto} from "../../projectos/shared/projecto.model";
 
 
 // # Filter Array of Objects

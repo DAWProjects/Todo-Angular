@@ -1,9 +1,22 @@
 <div class="container">
+        <div class="col-md-12 col-xs-12">
+            <div class="form-group col-md-8 col-xs-12">
+                <input type="text" class="form-control" placeholder="Procurar" [(ngModel)]="search">
+
+                <select class="form-control" #criterio>
+                    <option value="estado">Estado</option>
+                    <option value="membro">Membro</option>
+                    <option value="data_inicio">Data de Inicio</option>
+                </select>
+            </div>
+        </div>
+
+
 <h2>Todas as Tarefas</h2>
     <a class="btn btn-primary glyphicon glyphicon-plus" (click)="create()"></a>
 <ul class="heroes">
     <li
-            *ngFor="let tarefa of tarefas"
+            *ngFor="let tarefa of (tarefas | filtro:criterio.value:search)"
             [class.selected]="tarefa === selectedTarefa"
             (click)="onSelect(tarefa)">
         <span class="badge">{{tarefa.id}}</span> {{tarefa.titulo}}
