@@ -2,12 +2,14 @@ import {Component} from '@angular/core';
 import { MembroService, Membro } from './shared/index';
 import { OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {FilterArrayPipe} from  '../shared/utils/search-pipe.component';
 
 
 @Component({
     styleUrls:['app/membros/membros.component.css'],
     selector: 'show-membros',
     templateUrl:'app/membros/membros.component.html',
+    pipes:[FilterArrayPipe]
 })
 export class MembrosComponent implements OnInit{
 

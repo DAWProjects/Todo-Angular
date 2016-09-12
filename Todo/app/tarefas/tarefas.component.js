@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var index_1 = require('./shared/index');
+var search_pipe_component_1 = require('../shared/utils/search-pipe.component');
 var router_1 = require('@angular/router');
 var TarefasComponent = (function () {
     function TarefasComponent(router, tarefaService) {
@@ -38,6 +39,7 @@ var TarefasComponent = (function () {
             styleUrls: ['app/tarefas/tarefas.component.css'],
             selector: 'todas-tarefas',
             templateUrl: 'app/tarefas/tarefas.component.html',
+            pipes: [search_pipe_component_1.FilterArrayPipe],
         }), 
         __metadata('design:paramtypes', [router_1.Router, index_1.TarefaService])
     ], TarefasComponent);

@@ -1,6 +1,6 @@
 import {Component,OnInit} from '@angular/core';
 import {Tarefa,TarefaService } from './shared/index';
-
+import {FilterArrayPipe} from '../shared/utils/search-pipe.component';
 import { Router } from '@angular/router';
 
 
@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
     styleUrls:['app/tarefas/tarefas.component.css'],
     selector: 'todas-tarefas',
     templateUrl:'app/tarefas/tarefas.component.html',
+    pipes:[FilterArrayPipe],
+
 })
 export class TarefasComponent implements OnInit{
 

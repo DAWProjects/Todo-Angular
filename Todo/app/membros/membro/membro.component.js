@@ -11,10 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var index_1 = require('../shared/index');
+var projecto_service_1 = require("../../projectos/shared/projecto.service");
 var MembroComponent = (function () {
-    function MembroComponent(membroService, route) {
+    function MembroComponent(membroService, route, projectoService) {
         this.membroService = membroService;
         this.route = route;
+        this.projectoService = projectoService;
+        this.creating = false;
     }
     ;
     MembroComponent.prototype.ngOnInit = function () {
@@ -24,29 +27,27 @@ var MembroComponent = (function () {
             _this.membroService.getMembro(id)
                 .then(function (hero) { return _this.membro = hero; });
         });
+        this.getProjectos();
     };
     MembroComponent.prototype.goBack = function () {
         window.history.back();
     };
     ;
-    // add(titulo: string,
-    //     data_criacao: Date,
-    //     data_entrega_desejada: Date,
-    //     estado: string, membro: number): void {
-    //     this.creating = true;
-    //     if (titulo == '')
-    //         return;
-    //
-    //     this.tarefa = new Tarefa(membro, titulo, data_criacao, data_entrega_desejada, null,
-    //         estado);
-    //     this.tarefa.membro_id = membro;
-    //
-    //     this.tarefaService.create(this.tarefa).then(this.voltar);
-    // }
+    MembroComponent.prototype.add = function (nome, sexo, idade, projecto, grau_academico, cargo, telefone, email) {
+        this.creating = true;
+        if (nome == '')
+            return;
+        this.membro = new index_1.Membro(nome, idade, sexo, cargo, grau_academico, telefone, email, projecto);
+        this.membroService.create(this.membro).then(this.voltar);
+    };
     MembroComponent.prototype.voltar = function () {
         window.history.back();
     };
     ;
+    MembroComponent.prototype.getProjectos = function () {
+        var _this = this;
+        this.projectoService.getProjectos().then(function (projectos) { return _this.projectos = projectos; });
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', index_1.Membro)
@@ -57,7 +58,7 @@ var MembroComponent = (function () {
             templateUrl: 'app/membros/membro/membro.component.html',
             styleUrls: ['app/membros/membro/membro.component.css']
         }), 
-        __metadata('design:paramtypes', [index_1.MembroService, router_1.ActivatedRoute])
+        __metadata('design:paramtypes', [index_1.MembroService, router_1.ActivatedRoute, projecto_service_1.ProjectoService])
     ], MembroComponent);
     return MembroComponent;
 }());

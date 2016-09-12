@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var index_1 = require('./shared/index');
 var router_1 = require('@angular/router');
+var search_pipe_component_1 = require('../shared/utils/search-pipe.component');
 var MembrosComponent = (function () {
     function MembrosComponent(router, membroService) {
         this.router = router;
@@ -38,6 +39,7 @@ var MembrosComponent = (function () {
             styleUrls: ['app/membros/membros.component.css'],
             selector: 'show-membros',
             templateUrl: 'app/membros/membros.component.html',
+            pipes: [search_pipe_component_1.FilterArrayPipe]
         }), 
         __metadata('design:paramtypes', [router_1.Router, index_1.MembroService])
     ], MembrosComponent);
