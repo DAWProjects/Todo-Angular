@@ -21,10 +21,9 @@ class Membro extends Model
         'tarefa_id'];
 
     public function projecto(){
-        return $this->belongsTo('App\Projecto');
+        return $this->belongsToMany('App\Projecto', 'tarefas')->
+        withPivot('titulo','estado','data_criacao','data_entrega_desejada','data_entrega_real')->withTimestamps();
     }
 
-    public function tarefas(){
-        return $this->hasMany('App\Tarefa');
-    }
+
 }

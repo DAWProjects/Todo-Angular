@@ -15,6 +15,7 @@ class CreateTarefasTable extends Migration
     {
         Schema::create('tarefas', function (Blueprint $table) {
             $table->increments('id');
+            $table->timestamps();
             $table->string('titulo');
             $table->date('data_criacao');
             $table->date('data_entrega_desejada')->nullable();
@@ -22,9 +23,9 @@ class CreateTarefasTable extends Migration
             $table->string('estado')->nullable();
             $table->softDeletes();
             $table->integer('membro_id')->unsigned();
-            $table->foreign('membro_id')->references('id')->on('membros')->onDelete('cascade')
-                ->onUpdate('cascade');
-            $table->timestamps();
+            $table->foreign('membro_id')->references('id')->on('membros')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('projecto_id')->unsigned();
+            $table->foreign('projecto_id')->references('id')->on('projectos')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

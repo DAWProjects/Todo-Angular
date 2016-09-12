@@ -24,9 +24,6 @@ class CreateMembrosTable extends Migration
             $table->string('telefone');
             $table->string('email')->nullable();
             $table->softDeletes();
-            $table->integer('projecto_id')->unsigned();
-            $table->foreign('projecto_id')->references('id')->on('projectos')->onDelete('cascade')
-                ->onUpdate('cascade');
             $table->timestamps();
         });
     }

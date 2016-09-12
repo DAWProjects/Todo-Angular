@@ -16,7 +16,9 @@ class Projecto extends Model
     ];
 
 
-    public function membros(){
-        return $this->hasMany('App\Membro');
+
+    public function membro(){
+        return $this->belongsToMany('App\Membro', 'tarefas')->
+         withPivot('titulo','estado','data_criacao','data_entrega_desejada','data_entrega_real')->withTimestamps();
     }
 }
